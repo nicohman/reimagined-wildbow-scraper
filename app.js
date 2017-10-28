@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var https = require('follow-redirects').https;
 var program = require("commander");
 var fs = require('fs');

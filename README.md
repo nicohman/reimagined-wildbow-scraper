@@ -1,2 +1,3 @@
 # reimagined-wildbow-scraper
-Rewrote the old wildbow scraper into faster node.js, plus added several features to make it easier to use.
+Scrapes wildbow's twig, pact and worm into epubs with some extra ease-of-use features.
+Run node app.js with -t, -w, or -p to scrape twig, worm or pact respectively. --help for more info.
