@@ -19,9 +19,9 @@ if (version <= 6) {
     legacy = true;
 }
 
-function returnURL(url) {
+function returnURL(oldurl) {
     if (legacy) {
-        return url.parse(url)
+        return url.parse(oldurl)
     } else {
         var newurl = new urlCon(url)
         return newurl
