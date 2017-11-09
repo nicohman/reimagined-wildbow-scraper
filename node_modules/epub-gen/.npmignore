@@ -1,0 +1,4 @@
+.idea/
+tempDir
+node_modules/
+*.map

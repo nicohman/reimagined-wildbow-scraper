@@ -2,7 +2,7 @@
 var https = require('follow-redirects').https;
 var program = require("commander");
 var fs = require('fs');
-program.version('0.0.1').option("-r , --resume <html>", "Resume from HTML file").option('-w, --worm', "Scrape Worm").option("-t, --twig", "Scrape Twig").option("-p, --pact", "Scrape Pact").parse(process.argv);
+program.version('0.0.1').option("-r , --resume <html>", "Resume from HTML file").option('-w, --worm', "Scrape Worm").option("-t, --twig", "Scrape Twig").option("-p, --pact", "Scrape Pact").option("-g, --glow_worm", "Scrape Worm 2 Prologue").parse(process.argv);
 var cheerio = require('cheerio');
 var Epub = require("epub-gen");
 const url = require('url')
@@ -23,14 +23,15 @@ function returnURL(oldurl) {
     if (legacy) {
         return url.parse(oldurl)
     } else {
-        var newurl = new urlCon(url)
+        var newurl = new urlCon(oldurl)
         return newurl
     }
 }
 var urls = {
     pact: ["pactwebserial.wordpress.com", "/category/story/arc-1-bonds/1-01/"],
     worm: ["parahumans.wordpress.com", "/2011/06/11/1-1/"],
-    twig: ["twigserial.wordpress.com", "/2014/12/24/taking-root-1-1/"]
+    twig: ["twigserial.wordpress.com", "/2014/12/24/taking-root-1-1/"],
+    glow_worm:["parahumans.wordpress.com", "/2017/10/21/glowworm-p-1/"]
 }
 var books = {
     worm: {
@@ -48,6 +49,11 @@ var books = {
         author: "John McCrae",
         content: []
     },
+    glow_worm:{
+    	title:"Glow-worm",
+	author: "John McCrae",
+	content:[]
+    }
 }
 var scrapeChap = function(url, name) {
     https.get({
@@ -155,4 +161,6 @@ if (program.resume) {
     scrapeChap(urls.worm, "worm")
 } else if (program.pact) {
     scrapeChap(urls.pact, "pact")
+} else if (program.glow_worm){
+   scrapeChap(urls.glow_worm, "glow_worm");
 }

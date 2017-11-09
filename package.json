@@ -11,5 +11,5 @@
     "epub-gen": "0.0.17",
     "follow-redirects": "^1.2.4"
   },
-  "bin":"./app.js"
+  "bin": "./app.js"
 }
