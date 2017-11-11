@@ -2,7 +2,7 @@
 var https = require('follow-redirects').https;
 var program = require("commander");
 var fs = require('fs');
-program.version('0.0.1').option("-r , --resume <html>", "Resume from HTML file").option('-w, --worm', "Scrape Worm").option("-t, --twig", "Scrape Twig").option("-p, --pact", "Scrape Pact").option("-g, --glow_worm", "Scrape Worm 2 Prologue").parse(process.argv);
+program.version('0.0.1').option("-r , --resume <html>", "Resume from HTML file").option("-w2, --ward", "Scrape Ward").option('-w, --worm', "Scrape Worm").option("-t, --twig", "Scrape Twig").option("-p, --pact", "Scrape Pact").option("-g, --glow_worm", "Scrape Worm 2 Prologue").parse(process.argv);
 var cheerio = require('cheerio');
 var Epub = require("epub-gen");
 const url = require('url')
@@ -31,7 +31,8 @@ var urls = {
     pact: ["pactwebserial.wordpress.com", "/category/story/arc-1-bonds/1-01/"],
     worm: ["parahumans.wordpress.com", "/2011/06/11/1-1/"],
     twig: ["twigserial.wordpress.com", "/2014/12/24/taking-root-1-1/"],
-    glow_worm:["parahumans.wordpress.com", "/2017/10/21/glowworm-p-1/"]
+    glow_worm:["parahumans.wordpress.com", "/2017/10/21/glowworm-p-1/"],
+    ward:["parahumans.net","/2017/09/11/daybreak-1-1/"]
 }
 var books = {
     worm: {
@@ -53,6 +54,11 @@ var books = {
     	title:"Glow-worm",
 	author: "John McCrae",
 	content:[]
+    },
+    ward:{
+       title:"Ward",
+       author:"John McCrae",
+       content:[]
     }
 }
 var scrapeChap = function(url, name) {
@@ -163,4 +169,6 @@ if (program.resume) {
     scrapeChap(urls.pact, "pact")
 } else if (program.glow_worm){
    scrapeChap(urls.glow_worm, "glow_worm");
+} else if (program.ward){
+  scrapeChap(urls.ward,"ward");
 }
