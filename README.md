@@ -19,7 +19,7 @@ You might want to add an alias such as `alias riws = node ~/reimagined-wildbow-s
 `node app.js --help` for list of commands:
 ```
     -V, --version         output the version number
-    -r , --resume <html>  Resume from HTML file
+    -r , --resume <json>  Resume from JSON file
     -r, --ward            Scrape Ward
     -w, --worm            Scrape Worm
     -t, --twig            Scrape Twig
@@ -27,3 +27,5 @@ You might want to add an alias such as `alias riws = node ~/reimagined-wildbow-s
     -g, --glow_worm       Scrape Worm 2 Prologue
     -h, --help            output usage information
 ```
+
+It'll output an epub and a json file in your current directory. If you want to, you can save the json file and use to to resume later, saving you from having to download the whole rest of whatever book you're following along with.

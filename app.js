@@ -2,7 +2,7 @@
 var https = require('follow-redirects').https;
 var program = require("commander");
 var fs = require('fs');
-program.version('0.0.1').option("-r , --resume <html>", "Resume from HTML file").option("-r, --ward", "Scrape Ward").option('-w, --worm', "Scrape Worm").option("-t, --twig", "Scrape Twig").option("-p, --pact", "Scrape Pact").option("-g, --glow_worm", "Scrape Worm 2 Prologue").parse(process.argv);
+program.version('0.0.1').option("-r , --resume <json>", "Resume from JSON file").option("-r, --ward", "Scrape Ward").option('-w, --worm', "Scrape Worm").option("-t, --twig", "Scrape Twig").option("-p, --pact", "Scrape Pact").option("-g, --glow_worm", "Scrape Worm 2 Prologue").parse(process.argv);
 var cheerio = require('cheerio');
 var Epub = require("epub-gen");
 const url = require('url')
