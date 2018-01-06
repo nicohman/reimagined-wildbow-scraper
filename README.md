@@ -7,7 +7,9 @@ New: Now scrapes Ward(Worm 2)!
 
 All you'll need is npm and node. Run:
 
-`git clone https:://github.com/nicohman/reimagined-wildbow-scraper.git && cd reimagined-wildbow-scraper`
+`git clone https://github.com/nicohman/reimagined-wildbow-scraper.git`
+
+`cd reimagined-wildbow-scraper`
 
 `npm install`
 
