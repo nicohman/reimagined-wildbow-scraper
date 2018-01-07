@@ -7,7 +7,9 @@ New: Now scrapes Ward(Worm 2)!
 
 All you'll need is npm and node. Run:
 
-`git clone https:://github.com/nicohman/reimagined-wildbow-scraper.git && cd reimagined-wildbow-scraper`
+`git clone https://github.com/nicohman/reimagined-wildbow-scraper.git`
+
+`cd reimagined-wildbow-scraper`
 
 `npm install`
 
@@ -20,7 +22,7 @@ You might want to add an alias such as `alias riws = node ~/reimagined-wildbow-s
 ```
     -V, --version         output the version number
     -r , --resume <json>  Resume from JSON file
-    -r, --ward            Scrape Ward
+    -a, --ward            Scrape Ward
     -w, --worm            Scrape Worm
     -t, --twig            Scrape Twig
     -p, --pact            Scrape Pact
