@@ -1,4 +1,7 @@
 # reimagined-wildbow-scraper
+
+## Now deprecated in favor of [rust-wildbow-scraper](https://github.com/nicohman/rust-wildbow-scraper). Go use that instead!
+
 Scrapes wildbow's twig, pact and worm into epubs with some extra ease-of-use features.
 Run node app.js with -t, -w, -g, -r or -p to scrape twig, worm, glow-worm, ward or pact respectively. --help for more info.
 New: Now scrapes Ward(Worm 2)!
